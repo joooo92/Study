@@ -6,39 +6,26 @@ public class Ju {
 		int[] nums = {1,2,3,4};
 		int answer = 0;
 		int i = 0;
+		
+		 //3개 수 뽑기
+	    for(int a = 0; a < nums.length; a++) {
+				for(int b = a+1; b < nums.length; b++) {
+					for(int c = b+1; c < nums.length; c ++) {
+					//3개수 더하기
+					i = nums[a] + nums[b] + nums[c];
 
-		for(int a = 0; a < nums.length; a += 2) {
-			for(int b = 0; b < nums.length; b += 2) {
-				for(int c = 0; c < nums.length; c += 2) {
-					if(a < c) {
-						i = nums[a] + nums[b] + nums[c];
-						System.out.println(i);
-						//                  for(int d = 2; d < i; d++) {
-							//                     if(i / d != 0) {
-						//                        answer += 1;
-						//                     }
-
+	        // 소수 찾기
+					for(int j = 2; j <= i; j++) {
+						if(i == j) {
+							answer ++;
+						}else if(i % j == 0){
+							break;
+							}
+						}
 					}
-
 				}
-				//            else {
-				//                  break;
 			}
-
-		}
+		
+	    System.out.println(answer);
 	}
 }
-//      
-//      for(int d = 1; d < i; d++) {
-//         if(i % d != 0) {
-//            answer += 1;
-//            
-//         }
-//      }
-
-
-//System.out.println(answer);
-
-//}
-//
-//}
