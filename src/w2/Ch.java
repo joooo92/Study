@@ -10,7 +10,7 @@ public class Ch {
 		
 		for(int a = 0; a < nums.length ; a++) {
 			for(int b = a+1; b < nums.length; b++) {
-				for
+				//for
 				if(a == b) {
 					
 				}
